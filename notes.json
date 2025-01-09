@@ -1,18 +1,4 @@
-[
-  {
-    "content": "estudiar",
-    "id": 3
-  },
-  {
-    "content": "leer",
-    "id": 5
-  },
-  {
-    "content": "velo",
-    "id": 6
-  },
-  {
-    "content": "despensa",
-    "id": 4
-  }
-]
+{
+  "content": "despensa",
+  "id": 7
+}

@@ -17,7 +17,7 @@ let notes = [];
 
 const filePath = path.join(__dirname, "notes.json");
 
-//verificae si el archivo existe y si existe leerlos
+//verificar si el archivo existe y si existe leerlos
 
 if (fs.existsSync(filePath)) {
   try {
@@ -47,18 +47,17 @@ app.get("/notes", (req, res) => {
 app.post("/notes", (req, res) => {
   //crear id a nuevo producto
 
-  const getLastIndex = (array) => {
+  const getLastElement = (array) => {
     if (array.length === 0) {
       return undefined;
     }
     return array[array.length - 1];
   };
 
-  const lastElement = getLastIndex(notes);
-  console.log(notes[lastElement]);
-
-  let createId = lastElement.id + 1;
-
+  const lastElement = getLastElement(notes);
+  //generar id
+  let createId = lastElement ? lastElement.id + 1 : 1;
+  //crear nota con el ID
   const newNote = { ...req.body, id: createId };
 
   //agregar el producto al arrerglo

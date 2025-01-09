@@ -18,6 +18,7 @@ const lastNumber = getLastElement(notas);
 
 const asignacionId = lastNumber.id + 1;
 
-const nuevo = { ...notas, id: asignacionId };
+const nuevo = { id: asignacionId };
+JSON.stringify(nuevo);
 notas.push(nuevo);
 console.log(notas);
